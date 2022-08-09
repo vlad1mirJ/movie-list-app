@@ -25,11 +25,13 @@
 .signin {
   background-color: rgb(229, 9, 20);
   cursor: pointer;
+  color: white;
 }
 
 .signup {
   margin-left: 2em;
   cursor: pointer;
+  color: white;
 }
 
 @media (max-width: 490px) {
