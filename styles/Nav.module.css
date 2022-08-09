@@ -1,0 +1,39 @@
+.container {
+  margin: 0 auto;
+  max-width: 1150px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 36px;
+  color: rgb(229, 9, 20);
+  margin: 0;
+  cursor: pointer;
+}
+
+.almost {
+  color: white;
+  font-size: 16px;
+}
+
+.signin {
+  background-color: rgb(229, 9, 20);
+  cursor: pointer;
+}
+
+.signup {
+  margin-left: 2em;
+  cursor: pointer;
+}
+
+@media (max-width: 490px) {
+  .nav .signup {
+    display: none;
+  }
+}

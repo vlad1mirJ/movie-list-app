@@ -24,3 +24,15 @@ a {
     background: black;
   }
 }
+
+button {
+  padding: 0.5em 1.75em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+}

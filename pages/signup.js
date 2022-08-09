@@ -1,28 +1,28 @@
+import React from "react"
 import Head from "next/head"
-import Image from "next/image"
 import styles from "../styles/Home.module.css"
+import SignUp from "../components/SignUp.jsx"
 import Nav from "../components/Nav.jsx"
-import Hero from "../components/Hero.jsx"
-import { useSession } from "next-auth/react"
 import Router from "next/router"
+import { useSession } from "next-auth/react"
 
-export default function Home() {
+function Signup() {
   const { data: session, status } = useSession()
   if (status === "loading") {
     return <div>Loading...</div>
-  } else if (!session) {
+  } else if (status === "unauthenticated") {
     return (
-      <div className="">
+      <>
         <Head>
-          <title>Favorite movies</title>
-          <meta name="description" content="Best movie watchlist" />
-          <link rel="icon" href="/favicon.ico" />
+          <title>Sign Up</title>
         </Head>
         <header className={styles.header}>
           <Nav />
-          <Hero />
+          <SignUp />
         </header>
-      </div>
+      </>
     )
   } else Router.push("/list")
 }
+
+export default Signup
